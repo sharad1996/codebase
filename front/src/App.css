@@ -1,0 +1,17 @@
+.App {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.action-btns,
+.single-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.custom-form {
+  max-width: 40%;
+  min-width: 40%;
+  /* margin: 0 auto; */
+}
