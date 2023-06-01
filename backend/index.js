@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const bodyParser = require("body-parser");
