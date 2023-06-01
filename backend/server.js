@@ -1,13 +1,12 @@
-const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const express = require("express");
 const cors = require("cors");
-const jwt = require("jsonwebtoken");
+
+const sumEvenNumbers = require("./services");
 
 // routes
 const userRouting = require("./routes/user.route");
-
-const sumEvenNumbers = require("./services");
 
 const PORT = 8080;
 
@@ -31,6 +30,11 @@ app.use("/hello", (req, res) => {
   res.send("Hello World!");
 });
 
+/**
+ * --------------------------------------------------------------------------
+ * It'll handle sum of even numbers
+ * --------------------------------------------------------------------------
+ */
 app.post("/get-sum-of-event-numbers", (req, res) => {
   console.log(req.body);
   const { numbers } = req.body;
@@ -40,6 +44,7 @@ app.post("/get-sum-of-event-numbers", (req, res) => {
   });
 });
 
+// Here We're handling global errors
 app.use((error, req, res) => {
   const status = error.statusCode || 500;
   const message = error.message;

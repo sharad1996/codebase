@@ -9,6 +9,7 @@ import Button from "react-bootstrap/Button";
 import "./App.css";
 
 function App() {
+  // Default users list
   const u = [
     { name: "user1", email: "example1.com" },
     { name: "user2", email: "example2.com" },
@@ -16,13 +17,26 @@ function App() {
     { name: "user4", email: "example4.com" },
     { name: "user5", email: "example5.com" },
   ];
+
+  // Component states
   const [users, setUsers] = useState(u);
   const [addUser, setAddUser] = useState(false);
+
+  /**
+   * --------------------------------------------------------------------------
+   * When user add a new user, this method will call
+   * --------------------------------------------------------------------------
+   */
   const onHandleSubmit = (user) => {
     setUsers([...users, user]);
     toggleAddUser();
   };
 
+  /**
+   * --------------------------------------------------------------------------
+   * We're hiding or showing add user UI
+   * --------------------------------------------------------------------------
+   */
   const toggleAddUser = () => {
     setAddUser(!addUser);
   };

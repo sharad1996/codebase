@@ -7,7 +7,7 @@ const { buildSchema } = require("graphql");
 const bodyParser = require("body-parser");
 const User = require("./model/user.model");
 
-const PORT = 3003;
+const PORT = 8081;
 // Define the GraphQL schema
 const schema = buildSchema(`
   type User {
