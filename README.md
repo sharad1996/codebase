@@ -6,6 +6,6 @@
 **To run backend you've to follow these steps**
 1) npm install
 
-If you want to run only node server so run this command **npm start**, It will start the  node server in port **3000**.
-If you want to run **graphql** Server so you need to run this command **npm run start:graphql**, It'll start server on port **3001**
+If you want to run only node server so run this command **npm start**, It will start the  node server in port **8080**.
+If you want to run **graphql** Server so you need to run this command **npm run start:graphql**, It'll start server on port **8081**
  
